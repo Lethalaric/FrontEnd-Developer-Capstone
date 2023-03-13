@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
 import logo from "../../assets/logo.svg";
+import {Link} from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -11,12 +12,12 @@ export default function Footer() {
         <div className={"footer-container-doormat"}>
         <h3>Doormat Navigation</h3>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Menu</li>
-          <li>Reservations</li>
-          <li>Online Order</li>
-          <li>Login</li>
+            <li><Link to={"/"}>Home</Link></li>
+            <li><Link to={"/about"}>About</Link></li>
+            <li><Link to={"/menu"}>Menu</Link></li>
+            <li><Link to={"/reservation"}>Reservations</Link></li>
+            <li><Link to={"/order-online"}>Order Online</Link></li>
+            <li><Link to={"/login"}>Login</Link></li>
         </ul>
         </div>
         <div className={"footer-container-contact"}>

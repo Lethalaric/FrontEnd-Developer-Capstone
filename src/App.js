@@ -3,15 +3,29 @@ import Nav from "./sections/nav/Nav";
 import Header from "./sections/header/Header";
 import Footer from "./sections/footer/Footer";
 import Main from "./sections/main/Main";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Layout from "./pages/layout/Layout";
+import HomePage from "./pages/homePage/HomePage";
+import AboutPage from "./pages/aboutPage/AboutPage";
+import MenuPage from "./pages/menuPage/MenuPage";
+import ReservationPage from "./pages/reservationPage/ReservationPage";
+import OrderOnlinePage from "./pages/orderOnlinePage/OrderOnlinePage";
+import LoginPage from "./pages/loginPage/LoginPage";
 
 function App() {
   return (
-    <>
-      <Nav></Nav>
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
-    </>
+    <BrowserRouter>
+        <Routes>
+            <Route path={"/"} element={<Layout />} >
+                <Route index element={<HomePage />} />
+                <Route path={"/about"} element={<AboutPage />} />
+                <Route path={"/menu"} element={<MenuPage />} />
+                <Route path={"/reservation"} element={<ReservationPage />} />
+                <Route path={"/order-online"} element={<OrderOnlinePage />} />
+                <Route path={"/login"} element={<LoginPage />} />
+            </Route>
+        </Routes>
+    </BrowserRouter>
   );
 }
 

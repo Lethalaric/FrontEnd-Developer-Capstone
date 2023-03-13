@@ -23,6 +23,8 @@
 
 .nav-navigation-menu li a {
     cursor: pointer;
+    color: black;
+    text-decoration: none;
     padding-left: 1rem;
     padding-right: 1rem;
 }

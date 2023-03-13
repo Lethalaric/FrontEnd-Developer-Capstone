@@ -13,3 +13,12 @@
     margin: 0;
     padding: 0;
 }
+
+.footer-container-doormat ul li a,.footer-container-contact ul li a,.footer-container-social-media ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-container-doormat ul li a:hover,.footer-container-contact ul li a:hover,.footer-container-social-media ul li a:hover {
+    background-color: #FBDABB;
+}

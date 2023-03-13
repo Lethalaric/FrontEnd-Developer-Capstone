@@ -29,6 +29,15 @@
     align-items: center;
 }
 
+.review-card-container-content-right-side {
+    display: flex;
+    align-self: flex-start;
+}
+
+.review-card-container-content-right-side p {
+    margin: 0;
+}
+
 .review-card-container-avatar {
     vertical-align: middle;
     width: 75px;

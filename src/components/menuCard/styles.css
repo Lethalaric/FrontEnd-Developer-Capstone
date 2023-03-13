@@ -10,6 +10,8 @@
 
 .menu-card-container img {
     border-radius: 16px;
+    max-width: 350px;
+    max-height: 233px;
 }
 
 .menu-card-container-title {

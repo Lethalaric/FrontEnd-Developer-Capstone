@@ -1,9 +1,6 @@
-.header {
-    background-color: #495E57;
-}
-
 .header-container {
     display: flex;
+    background-color: #495E57;
     flex-direction: column;
     padding-right: 2rem;
     padding-left: 2rem;
