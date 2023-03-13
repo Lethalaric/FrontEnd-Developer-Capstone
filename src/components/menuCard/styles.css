@@ -1,0 +1,43 @@
+.menu-card-container {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    background-color: #E5E4E4;
+    padding: 0.5rem;
+    border-radius: 16px;
+}
+
+.menu-card-container img {
+    border-radius: 16px;
+}
+
+.menu-card-container-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-card-container-title h3:last-child {
+    color: #F4CE14;
+}
+
+.menu-card-container p {
+    margin-top: 1rem;
+}
+
+.menu-card-container button {
+    cursor: pointer;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F4CE14;
+    width: 228px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 16px;
+}
+
+.menu-card-container button:hover {
+    background-color: #FBDABB;
+}

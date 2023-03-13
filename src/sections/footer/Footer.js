@@ -1,10 +1,14 @@
 import React from "react";
+import "./styles.css";
+import logo from "../../assets/logo.svg";
 
 export default function Footer() {
   return (
-    <div>
-      <img />
-      <div>
+    <div className={"footer-container"}>
+        <div className={"footer-container-logo"}>
+            <img src={logo}/>
+        </div>
+        <div className={"footer-container-doormat"}>
         <h3>Doormat Navigation</h3>
         <ul>
           <li>Home</li>
@@ -14,8 +18,8 @@ export default function Footer() {
           <li>Online Order</li>
           <li>Login</li>
         </ul>
-      </div>
-      <div>
+        </div>
+        <div className={"footer-container-contact"}>
         <h3>Contact</h3>
         <ul>
           <li>Address</li>
@@ -24,8 +28,8 @@ export default function Footer() {
           <li>Customer Service</li>
           <li>Email</li>
         </ul>
-      </div>
-      <div>
+        </div>
+        <div className={"footer-container-social-media"}>
         <h3>Social Media</h3>
         <ul>
           <li>Facebook</li>
@@ -34,7 +38,7 @@ export default function Footer() {
           <li>Tiktok</li>
           <li>Zomato</li>
         </ul>
-      </div>
+        </div>
     </div>
   );
 }

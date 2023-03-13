@@ -1,0 +1,36 @@
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-container-content-left p {
+    max-width: 750px;
+}
+
+.about-container-content-right {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.about-container-content-right img {
+    height: 300px;
+    width: 300px;
+    border-radius: 16px;
+}
+
+.about-container-content-right img:first-child{
+    position: relative;
+    top: 0;
+    right: 0;
+    border: 1px solid #000000;
+}
+
+.about-container-content-right img:last-child {
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    border: 1px solid #000000;
+}

@@ -1,0 +1,14 @@
+.testimonial-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f5f4f4;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.testimonial-container-content {
+    display: flex;
+    gap: 20px;
+}

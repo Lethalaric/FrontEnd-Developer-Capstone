@@ -1,0 +1,32 @@
+.special-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.special-container-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.special-container-title button {
+    background-color: #F4CE14;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    border-radius: 16px;
+}
+
+.special-container-title button:hover {
+    background-color: #FBDABB;
+}
+
+.special-container-content {
+    display: flex;
+    justify-content: space-evenly;
+}

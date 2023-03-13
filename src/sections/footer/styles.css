@@ -1,0 +1,15 @@
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-container-logo {
+    display: flex;
+    align-self: center;
+}
+
+.footer-container-doormat ul,.footer-container-contact ul,.footer-container-social-media ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

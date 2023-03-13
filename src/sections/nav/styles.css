@@ -1,0 +1,32 @@
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 5rem;
+}
+
+.nav-container img {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+}
+
+.nav-container img:hover {
+    background-color: #FBDABB;
+}
+
+.nav-navigation-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.nav-navigation-menu li a {
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav-navigation-menu li a:hover {
+    background-color: #FBDABB;
+}
