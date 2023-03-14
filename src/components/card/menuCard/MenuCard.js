@@ -1,5 +1,5 @@
 import React from "react";
-import brochette from "../../assets/bruchetta.svg";
+import brochette from "../../../assets/bruchetta.svg";
 import "./styles.css";
 
 export default function MenuCard({title, price, description, image}) {

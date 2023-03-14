@@ -1,5 +1,5 @@
 import React from 'react';
-import MenuCard from "../menuCard/MenuCard";
+import MenuCard from "../card/menuCard/MenuCard";
 import brochette from "../../assets/bruchetta.svg";
 import greekSalad from "../../assets/greek salad.jpg";
 import lemonDessert from "../../assets/lemon dessert.jpg";

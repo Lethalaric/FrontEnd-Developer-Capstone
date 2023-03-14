@@ -1,8 +1,4 @@
 import "./App.css";
-import Nav from "./sections/nav/Nav";
-import Header from "./sections/header/Header";
-import Footer from "./sections/footer/Footer";
-import Main from "./sections/main/Main";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "./pages/layout/Layout";
 import HomePage from "./pages/homePage/HomePage";

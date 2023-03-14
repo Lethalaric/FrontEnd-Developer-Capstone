@@ -1,5 +1,5 @@
 import React from 'react';
-import ReviewCard from "../reviewCard/ReviewCard";
+import ReviewCard from "../card/reviewCard/ReviewCard";
 import avatar1 from "../../assets/avatar-110d53c987b703ac6a2cef9f87db8be6.png";
 import avatar2 from "../../assets/avatar-113a0920a59324e2041b23279933e411.png";
 import avatar3 from "../../assets/avatar-112169d64826edc74529e60aa2b4a0e5.png";

@@ -1,5 +1,5 @@
 import React from "react";
-import avatar from "../../assets/avatar-110d53c987b703ac6a2cef9f87db8be6.png";
+import avatar from "../../../assets/avatar-110d53c987b703ac6a2cef9f87db8be6.png";
 import "./styles.css";
 
 export default function ReviewCard({rating, image, name, review}) {
