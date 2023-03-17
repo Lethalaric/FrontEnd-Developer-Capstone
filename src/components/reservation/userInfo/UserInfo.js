@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
+import {useNavigate} from "react-router-dom";
+import "../../../pages/reservationPage/styles.css";
 
-function UserInfo({saveReservation}) {
+function UserInfo({dispatch}) {
+
+    const navigate = useNavigate();
+
     const [userInfo, setUserInfo] = useState({
-        prefix: "",
+        prefix: "Mr.",
         firstName: "",
         lastName: "",
         mobileNumber: "",
@@ -18,21 +23,34 @@ function UserInfo({saveReservation}) {
     }
 
     const handleSubmit = (event) => {
+        const randomInteger = Math.floor(Math.random() * 1000001) + 1000000;
         event.preventDefault();
-        saveReservation({name: "userInfo", value: userInfo});
+        dispatch({type: 'SUBMIT', name: 'userInfo', value: userInfo});
+        dispatch({type: 'SUBMIT', name: 'orderId', value: 'LLR'+randomInteger});
+        navigate("/reservation/fill-date-info");
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>Prefix: <textarea onChange={handleChange} value={userInfo.prefix} name={"prefix"} /> <br/></label>
-                <label>First Name: <textarea onChange={handleChange} value={userInfo.firstName} name={"firstName"} /> <br/></label>
-                <label>Last Name: <textarea onChange={handleChange} value={userInfo.lastName} name={"lastName"} /> <br/></label>
-                <label>Mobile Number: <input onChange={handleChange} value={userInfo.mobileNumber} name={"mobileNumber"} type={"tel"} /> <br/></label>
-                <label>Email: <input onChange={handleChange} value={userInfo.email} name={"email"} type={"email"} /> <br/></label>
-                <input type={"submit"} value={"Submit"} />
+        <>
+            <form onSubmit={handleSubmit} className={"reservation-container-form"}>
+                <div className={"reservation-container-form-grid"}>
+                    <label >Prefix</label>
+                    <select onChange={handleChange} name={"prefix"}>
+                        <option value={"Mr."} name={"mr"}>Mr.</option>
+                        <option value={"Mrs."}>Mrs.</option>
+                    </select>
+                    <label >First Name</label>
+                    <input onChange={handleChange} value={userInfo.firstName} name={"firstName"} required={true} />
+                    <label >Last Name</label>
+                    <input onChange={handleChange} value={userInfo.lastName} name={"lastName"} />
+                    <label >Mobile Number</label>
+                    <input onChange={handleChange} value={userInfo.mobileNumber} name={"mobileNumber"} type={"tel"} pattern="[0-9]{10}" required={true} />
+                    <label >Email</label>
+                    <input onChange={handleChange} value={userInfo.email} name={"email"} type={"email"} required={true} />
+                </div>
+                <button type={"submit"} name={"submit"} onSubmit={handleSubmit}>Next</button>
             </form>
-        </div>
+        </>
     );
 }
 

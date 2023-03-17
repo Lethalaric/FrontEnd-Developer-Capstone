@@ -1,6 +1,11 @@
-import React, {useState} from 'react';
+import React, {useReducer, useState} from 'react';
+import {reducer, dataReservation} from "../../../reducer/ReservationReducer";
+import {Link, useNavigate} from "react-router-dom";
 
-function ReserveTable({saveReservation}) {
+function ReserveTable({dispatch}) {
+
+    const navigate = useNavigate();
+
     const [pickTable, setPickTable] = useState({
         numberOfGuests: "",
         isNearWindow: false,
@@ -18,18 +23,25 @@ function ReserveTable({saveReservation}) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        saveReservation({name: "tableInfo", value: pickTable});
+        dispatch({type: 'SUBMIT', name: 'tableInfo', value: pickTable});
+        navigate("/reservation/confirmation");
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>Number of Guests: <textarea name={"numberOfGuests"} value={pickTable.numberOfGuests} onChange={handleChange} /> <br/></label>
-                <label>Near Window: <input type={"checkbox"} name={"isNearWindow"} value={pickTable.isNearWindow} onChange={handleChange} /> <br/></label>
-                <label>Using Sofa: <input type={"checkbox"} name={"isUsingSofa"} value={pickTable.isUsingSofa} onChange={handleChange} /> <br/></label>
-                <label>Smoking Allowed: <input type={"checkbox"} name={"allowSmoking"} value={pickTable.allowSmoking} onChange={handleChange} /> <br/></label>
-                <input type={"submit"} value={"Submit"}/>
+        <>
+            <form className={"reservation-container-form"} onSubmit={handleSubmit}>
+                <div className={"reservation-container-form-grid"}>
+                    <label>Number of Guests</label>
+                    <input type={"number"} name={"numberOfGuests"} value={pickTable.numberOfGuests} onChange={handleChange} required={true} />
+                    <label>Near Window</label>
+                    <input type={"checkbox"} name={"isNearWindow"} value={pickTable.isNearWindow} onChange={handleChange} />
+                    <label>Using Sofa</label>
+                    <input type={"checkbox"} name={"isUsingSofa"} value={pickTable.isUsingSofa} onChange={handleChange} />
+                    <label>Smoking Allowed</label>
+                    <input type={"checkbox"} name={"allowSmoking"} value={pickTable.allowSmoking} onChange={handleChange} />
+                </div>
+                <button type={"submit"} name={"submit"} onSubmit={handleSubmit}>Next</button>
             </form>
-        </div>
+        </>
     );
 }
 

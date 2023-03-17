@@ -1,0 +1,48 @@
+.confirmation-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmation-container-user-info-content,
+.confirmation-container-date-info-content,
+.confirmation-container-table-info-content {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    background-color: #495E57;
+    width: 350px;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    gap: 15px;
+}
+
+.confirmation-container-user-info-content p,
+.confirmation-container-date-info-content p,
+.confirmation-container-table-info-content p {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.confirmation-container-user-info-content p:nth-child(odd):after,
+.confirmation-container-date-info-content p:nth-child(odd):after,
+.confirmation-container-table-info-content p:nth-child(odd):after {
+    content: ":";
+}
+
+.confirmation-container button {
+    background-color: #F4CE14;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    border-radius: 16px;
+}
+
+.confirmation-container button:hover {
+    background-color: #FBDABB;
+}

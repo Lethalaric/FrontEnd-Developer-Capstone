@@ -6,10 +6,10 @@ import About from "../about/About";
 
 export default function Main() {
   return (
-    <div>
+    <>
       <Special />
       <Testimonial />
       <About />
-    </div>
+    </>
   );
 }
