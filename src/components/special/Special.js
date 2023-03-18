@@ -36,7 +36,7 @@ function Special(props) {
             </div>
             <div className={"special-container-content"}>
                 {specialMenus.map(specialMenu => {
-                    return <MenuCard {...specialMenu} />
+                    return <MenuCard key={specialMenu.title} {...specialMenu} />
                 })}
             </div>
         </div>

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div className={"footer-container"}>
         <div className={"footer-container-logo"}>
-            <img src={logo}/>
+            <img src={logo} alt={'logo'}/>
         </div>
         <div className={"footer-container-doormat"}>
         <h3>Doormat Navigation</h3>

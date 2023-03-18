@@ -39,7 +39,7 @@ function Testimonial(props) {
             <h1>Testimonials</h1>
             <div className={"testimonial-container-content"}>
                 {reviews.map(review => {
-                    return <ReviewCard {...review}/>
+                    return <ReviewCard key={review.name} {...review}/>
                 })}
             </div>
         </div>
