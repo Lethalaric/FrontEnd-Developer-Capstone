@@ -1,0 +1,23 @@
+.complete-notification-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete-notification-container h1 {
+    color: #F4CE14;
+}
+
+.complete-notification-container button {
+    background-color: #F4CE14;
+    cursor: pointer;
+    font-size: 20px;
+    width: 200px;
+    height: 35px;
+    border-radius: 16px;
+}
+
+.complete-notification-container button:hover {
+    background-color: #FBDABB;
+}

@@ -1,11 +1,11 @@
-const dataReservation = {
+const dataBooking = {
     userInfo: null,
     dateInfo: null,
     tableInfo: null,
-    orderId: null,
+    bookingId: null,
 }
 
-const reducer = (state, action) => {
+const bookingReducer = (state, action) => {
     switch (action.type) {
         case "SUBMIT":
             return {...state, [action.name]: action.value};
@@ -14,4 +14,4 @@ const reducer = (state, action) => {
     }
 }
 
-export {reducer, dataReservation};
+export {bookingReducer, dataBooking};

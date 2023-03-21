@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
-import "../../../pages/reservationPage/styles.css";
+import "../../../pages/bookingPage/styles.css";
 
 function UserInfo({dispatch}) {
 
@@ -26,14 +26,14 @@ function UserInfo({dispatch}) {
         const randomInteger = Math.floor(Math.random() * 1000001) + 1000000;
         event.preventDefault();
         dispatch({type: 'SUBMIT', name: 'userInfo', value: userInfo});
-        dispatch({type: 'SUBMIT', name: 'orderId', value: 'LLR'+randomInteger});
-        navigate("/reservation/fill-date-info");
+        dispatch({type: 'SUBMIT', name: 'bookingId', value: 'LLR'+randomInteger});
+        navigate("/booking/fill-date-info");
     }
 
     return (
         <>
-            <form onSubmit={handleSubmit} className={"reservation-container-form"}>
-                <div className={"reservation-container-form-grid"}>
+            <form onSubmit={handleSubmit} className={"booking-container-form"}>
+                <div className={"booking-container-form-grid"}>
                     <label >Prefix</label>
                     <select onChange={handleChange} name={"prefix"}>
                         <option value={"Mr."} name={"mr"}>Mr.</option>

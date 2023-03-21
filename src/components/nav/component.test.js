@@ -12,14 +12,14 @@ describe("Navigation section tests", () => {
         const homeElement = getByText('HOME');
         const aboutElement = getByText('ABOUT');
         const menuElement = getByText('MENU');
-        const reservationsElement = getByText('RESERVATIONS');
+        const bookingElement = getByText('BOOKING');
         const orderOnlineElement = getByText('ORDER ONLINE');
         const loginElement = getByText('LOGIN');
 
         expect(homeElement).toBeInTheDocument();
         expect(aboutElement).toBeInTheDocument();
         expect(menuElement).toBeInTheDocument();
-        expect(reservationsElement).toBeInTheDocument();
+        expect(bookingElement).toBeInTheDocument();
         expect(orderOnlineElement).toBeInTheDocument();
         expect(loginElement).toBeInTheDocument();
     })
